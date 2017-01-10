@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="row flex-row" wx:for="{{totalList}}" wx:for-item="currency" wx:key="select" bindtap="select" id="{{currency.key}}">
+    <view class="currency">
+      <image src="{{currency.image}}"></image>
+      <view class="flex-col">
+        <text>{{currency.name}}</text>
+        <text class="small">{{currency.key}}</text>
+      </view>
+    </view>
+    <view class="selected">
+      <image src="/images/checked.png" wx:if="{{currency.display == true}}"></image>
+      <image src="" wx:if="{{currency.display != true}}"></image>
+    </view>
+  </view>
+  <view hidden = "{{_show}}" class="twoCurrency">最少选两种货币</view>
+</view>
+
+<view class="confirm" bindtap="confirm">
+  确定
+</view>

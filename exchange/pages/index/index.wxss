@@ -1,0 +1,97 @@
+/**index.wxss**/
+page {
+  background-color: #fbfbfb;
+}
+.container{
+  padding-bottom:100rpx;
+}
+.top, .main {
+  width: 100%;
+}
+.inner {
+  padding: 0 20rpx; 
+}
+.top {
+  padding: 26rpx 0;
+  font-size: 26rpx;
+  color: #616161;
+}
+.main {
+  background-color: #fff;
+}
+.row {
+  
+  padding-top: 35rpx;
+  padding-bottom: 35rpx;
+
+}
+.row image {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 20rpx;
+  flex: none;
+  margin-left:40rpx;
+  border-radius: 35rpx;
+}
+.name {
+  line-height: 70rpx;
+  width: 150rpx;
+  padding-right: 50rpx;
+  border-right: 1px solid #f2f2f2;
+  flex: none;
+}
+.row .flex-col {
+  flex: 1;
+  padding-right:40rpx;
+
+}
+.row input {
+  line-height: 70rpx;
+  height: 70rpx;
+  text-align: right;
+}
+.row input:focus {
+  text-align: right;
+  direction: rtl;  
+}
+.icon-box{
+  width:8%;
+  margin-left:2%;
+  height:50rpx;
+}
+.icon-box image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 9rpx;
+}
+.time { 
+  width: 45%;
+  height:50rpx;
+ line-height:50rpx;
+}
+.title{
+  font-size: 38rpx;
+   width: 45%;
+  height:50rpx;
+  line-height:50rpx;
+
+}
+.time { text-align: right; color: #808080; }
+
+.border-bottom {
+  border-bottom: 1px solid #f2f2f2;
+}
+.foot {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 30rpx 0;
+  text-align: center;
+  border-top: 1px solid #f2f2f2;
+  z-index: 1000;
+  background: #fff;
+}
+.symbol {
+  text-align: right;
+  font-size: 20rpx;
+}

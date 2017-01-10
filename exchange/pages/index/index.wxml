@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+    <view class="inner flex-row">
+      <view class="icon-box">
+        <image src="/images/favicon.png"></image>
+      </view>
+      <text class="title">牛交所实时汇率</text>
+      <text class="time">{{time}}</text>
+    </view>
+  </view>
+  <view class="main">
+    <view class="inner row flex-row border-bottom" wx:for="{{list}}" wx:for-item="currency" wx:key="showlist">
+      <image src="{{currency.image}}"></image>
+      <text class="name">{{currency.key}}</text>
+      <view class="flex-col">
+        <input id="{{currency.key}}" type="digit" maxlength="14" bindinput="keyInput" value="{{valueList[currency.key]}}" />
+	       <text class="symbol">{{currency.name}} {{currency.symbol}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="foot" bindtap="choose">
+  + 添加货币
+</view>
