@@ -11,12 +11,23 @@
   </view>
   <view class="main">
     <view class="inner row flex-row border-bottom" wx:for="{{list}}" wx:for-item="currency" wx:key="showlist">
-      <image src="{{currency.image}}"></image>
-      <text class="name">{{currency.key}}</text>
+      <view class="image-name-box" bindtap="currencySkip" data-value="{{currency.key}}">
+        <image src="{{currency.image}}"></image>
+        <text class="name">{{currency.key}}</text>
+      </view>
       <view class="flex-col">
         <input id="{{currency.key}}" type="digit" maxlength="14" bindinput="keyInput" value="{{valueList[currency.key]}}" />
 	       <text class="symbol">{{currency.name}} {{currency.symbol}}</text>
       </view>
+    </view>
+  </view>
+  <view class="tip" bindtap="close" hidden = "{{close}}">
+    <view class="close">×</view>
+    <view class="tipImg">
+      <image src="../../images/uparrow.png"></image>
+    </view>
+    <view class="tiptxt">
+      点击国旗可查看该货币各银行牌价
     </view>
   </view>
 </view>

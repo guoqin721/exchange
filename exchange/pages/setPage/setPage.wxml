@@ -1,0 +1,26 @@
+<view class="tradeType">
+    <view class="title">交易类型</view>
+    <radio-group class="trade-radio-group" bindchange="radioChange">
+        <label class="trade-radio" wx:for="{{trade}}" wx:key="trageTape">
+            <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+    </radio-group>
+</view>
+<!--<view class="bank">
+    <view class="title">银行</view>
+    <radio-group class="bank-radio-group" bindchange="radioChange">
+        <label class="bank-radio" wx:for="{{bank}}" wx:key="bankTape">
+            <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+        </label>
+    </radio-group>
+</view>-->
+<view class="bank">
+    <view class="title">银行</view>
+    <view class="bankTape-box">
+        <view wx:for="{{bank}}" wx:for-item ="bankTape" wx:key="bankTape" class="bankType {{bankTape.checked? 'active' : ''}}" data-index="{{index}}" bindtap="bankType" data-value="{{bankTape.name}}">
+            <image class="bankImage" src="{{bankTape.src}}"></image>
+            <view class="bankName">{{bankTape.value}}</view>
+        </view>
+    </view>
+</view>
+<view class="confirm" bindtap="confirm">确定</view>

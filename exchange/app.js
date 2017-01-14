@@ -16,12 +16,17 @@ App({
 		  { key: 'USD', name: '美元', symbol: '$', display: true  },
 		  { key: 'HKD', name: '港币', symbol: '$', display: true  },
 		  { key: 'EUR', name: '欧元', symbol: '€', display: true  },
-		  { key: 'JPY', name: '日元', symbol: '¥' },
+		  { key: 'JPY', name: '日元', symbol: '￥' },
 		  { key: 'GBP', name: '英镑', symbol: '£', display: true  },
 		  { key: 'TWD', name: '新台币', symbol: 'NT$' },
 		  { key: 'MOP', name: '澳门币', symbol: 'MOP' },
 		  { key: 'AUD', name: '澳元', symbol: '$' },
-		  { key: 'CAD', name: '加拿大元', symbol: '$' }
+		  { key: 'CAD', name: '加拿大元', symbol: '$' },
+		  { key: 'KRW', name: '韩元', symbol: '₩' },
+		  { key: 'SGD', name: '新加坡元', symbol: '$' },
+		  { key: 'CHF', name: '瑞士法郎', symbol: 'SFR' },
+		  { key: 'NZD', name: '新西兰元', symbol: '$' }
+
 		]
 
 		let currencylist = wx.getStorageSync('currencylist') || list

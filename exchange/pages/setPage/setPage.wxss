@@ -1,0 +1,78 @@
+/* pages/setPage/setPage.wxss */
+.tradeType{
+    margin-bottom: 40rpx;
+    margin-top: 40rpx;
+}
+.title{
+    height:80rpx;
+    line-height:80rpx;
+    font-size:46rpx;
+    padding-left:40rpx;
+    width: 100%;
+    background-color: #fbfbfb;
+    margin-bottom:40rpx;
+
+}
+.trade-radio-group{
+   width: 90%;
+   margin: auto;
+   padding-left: 80rpx;
+   font-size:34rpx;
+}
+.trade-radio{
+    width: 50%;
+    display: inline-block;
+    text-align:left;
+    margin:14rpx auto;
+}
+.bank-radio-group{
+   width: 90%;
+   margin: auto;
+   font-size:34rpx;
+}
+.bank-radio{
+    width: 33.3%;
+    display: inline-block;
+    text-align:left;
+    margin:14rpx auto;
+}
+
+.bankTape-box{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+.bankType{
+    display: flex;
+    float: left;
+    width: 32%;
+    height: 80rpx;
+    line-height: 80rpx;
+    border: 2px solid transparent;
+    text-align: center;
+    font-size: 28rpx;
+    border-radius: 10rpx;
+}
+.bankType.active{
+     border: 2px solid #666;
+}
+.bankType>image{
+    width: 50rpx;
+    height: 50rpx;
+    margin-top: 15rpx;
+    margin-left: 20rpx;
+}
+.bankName{
+    flex:1; 
+}
+.confirm{
+    position: fixed;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    border-top: 1px solid #f2f2f2;
+    width: 100%;
+    background-color: #fff;
+}

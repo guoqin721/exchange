@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="compute-top">
+        <view class="imgBox width90">
+            <view class="leftCurrecy currencyImg">
+                <image src="{{list.image}}"></image>
+            </view>
+            <view class="arrow">
+                <image src="../../images/arrow.png"></image>
+            </view>
+            <view class="currencyImg">
+                <image src="../../images/currency/cny.png"></image>
+            </view>
+        </view>
+        <view class="compute width90">
+            1 {{list.key}} = {{result}} CNY
+        </view>
+    </view>
+    <view class="bank-bottom">
+        <view class="bankItem" wx:for="{{bank}}"  wx:for-item="bankItem" wx:key="bankItem">
+            <view>
+                <view>
+                    <image src="{{bankItem.src}}" class="bankimage"></image>
+                </view>
+            </view>
+           <view data-rate="{{bankItem.rate}}"data-index="{{index}}" bindtap="bankChoose" class="bankChoose">
+                <view class="bankName">{{bankItem.value}}</view>
+                <view class="bankRate">{{bankItem.rate}}</view>
+           </view>
+        </view>
+    </view>
+    <view class="tradeType">
+        <view class="{{navbar == 0 ? 'active' : ''}}" bindtap="navbar" data-index="0" data-value="xh_buy_price">现汇买入</view>
+        <view class="{{navbar == 1 ? 'active' : ''}}" bindtap="navbar" data-index="1" data-value="xc_buy_price">现钞买入</view>
+        <view class="{{navbar == 2 ? 'active' : ''}}" bindtap="navbar" data-index="2" data-value="xc_sell_price">现钞/汇卖出</view>
+        <view class="{{navbar == 3 ? 'active' : ''}}" bindtap="navbar" data-index="3" data-value="mid_price">中间价</view>
+    </view>
+</view>

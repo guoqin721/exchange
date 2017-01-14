@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/listItem/listItem",
+    "pages/setPage/setPage",
     "pages/list/list",
     "pages/logs/logs"
   ],

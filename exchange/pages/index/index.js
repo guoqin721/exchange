@@ -33,7 +33,8 @@ Page({
 		value: 100,
 		valueList: {},
 		time: util.formatTime2(new Date()),
-		rates:{}
+		rates:{},
+		close:false
   },
   //事件处理函数
 	onLoad: function () {
@@ -56,13 +57,11 @@ Page({
 		})
 		this.setData(data)
 	},
-	//url: "http://api.fundusd.com/v1/exchanges/wechat",
 	updateValue: function () {
 		let that = this
-		this.getExchange(function(res){
-				console.log(res.data);
-				let rates = res.data;
-				rates.CNY="1";
+		this.getExchange(function(refer){
+				let rates = refer;
+				rates.CNY="100";
 				that.setData({
 					rates:rates
 				})
@@ -76,14 +75,14 @@ Page({
 	},
 	getExchange: function (success, fail) {
 		wx.request({
-			url: "https://api.fundusd.com/v1/exchanges/wechat",
+			url: "https://api.fundusd.com/v1/exchanges/wxapp",
 			header: {
 				'content-type': 'application/json'
 			},
 			method: 'GET',
             data: {},
 			success: (res) => {
-				success(res)
+				success(res.data.refer)
 			},
 			fail: (res) => {
 				console.log("失败");
@@ -107,6 +106,9 @@ Page({
 	},
 	choose: function () {
 		wx.navigateTo({ url: '/pages/list/list' })
+	},
+	setPage:function(){
+		wx.navigateTo({ url: '/pages/setPage/setPage' })
 	},
 	keyInput: function (e) {
 		this.setData({
@@ -157,15 +159,15 @@ Page({
 		})*/
 
 		wx.request({
-			url: "https://api.fundusd.com/v1/exchanges/wechat",
+			url: "https://api.fundusd.com/v1/exchanges/wxapp",
 			header: {
 				'content-type': 'application/json'
 			},
 			method: 'GET',
             data: {},
 			success: (res) => {
-				let rates = res.data;
-				rates.CNY="1";
+				let rates = res.data.refer;
+				rates.CNY="100";
 				this.setData({
 					rates:rates
 				})
@@ -206,5 +208,15 @@ Page({
 			desc: '汇率计算，实时更新，方便查询',
 			path: '/pages/index/index'
 		}
+	},
+	currencySkip:function(e){
+		wx.navigateTo({
+			url: '/pages/listItem/listItem?key='+e.currentTarget.dataset.value
+		})
+	},
+	close:function(){
+		this.setData({
+			close:true
+		})
 	}
 })

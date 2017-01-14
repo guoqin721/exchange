@@ -15,9 +15,9 @@
 }
 .currency image{
   margin-top: 16rpx;
-  width: 50rpx;
-  height: 50rpx;
-  border-radius: 25rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border:1px solid #eee;
 }
 .flex-col{
   margin-left:36rpx;
